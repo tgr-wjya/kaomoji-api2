@@ -1,0 +1,25 @@
+{
+	"name": "kaomoji-api2",
+	"module": "index.ts",
+	"type": "module",
+	"private": true,
+	"devDependencies": {
+		"@biomejs/biome": "2.4.10",
+		"@types/bun": "latest"
+	},
+	"peerDependencies": {
+		"typescript": "^5"
+	},
+	"dependencies": {
+		"@hono/zod-validator": "^0.7.6",
+		"hono": "^4.12.9",
+		"husky": "^9.1.7",
+		"zod": "^4.3.6"
+	},
+	"scripts": {
+		"prepare": "husky",
+		"biome:check": "bunx biome check --write",
+		"biome:ci": "bunx biome ci",
+		"dev": "bun src/server.ts"
+	}
+}

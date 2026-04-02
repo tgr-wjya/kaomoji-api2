@@ -9,6 +9,10 @@ export const KaomojiSchema = z.object({
 	name: z.string().min(3),
 });
 
+export const GetKaomojiIdSchema = z.object({
+	id: z.number().min(1),
+});
+
 export type Kaomoji = z.Infer<typeof KaomojiSchema>;
 
 export const KAOMOJI_COLLECTION: Kaomoji[] = [
